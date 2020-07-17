@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=Shift-JIS">
-<base href="http<?php if (!empty($_SERVER['HTTPS'])) echo 's'; ?>://<?= $_SERVER['HTTP_HOST'] ?>/" target="_self">
+<base href="http<?php if (!empty($_SERVER['HTTPS']) || (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https')) echo 's'; ?>://<?= $_SERVER['HTTP_HOST'] ?>/" target="_self">
 <title><?php if( !empty( $data['page_title'] ) ) echo $data['page_title'] . ' '; ?>PHPフレームワーク　ちいたん</title>
 <link href="style.css" rel="stylesheet" type="text/css">
 </head>
