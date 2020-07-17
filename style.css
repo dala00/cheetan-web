@@ -1,0 +1,171 @@
+body {
+	margin: 0px;
+	font-size: 13px;
+	line-height: 140%;
+}
+td {
+	font-size: 13px;
+	line-height: 140%;
+}
+h1 {
+	font-style: normal;
+	font-size: 22px;
+	border-bottom: 2px solid #FFDDFF;
+}
+h2 {
+	font-style: normal;
+	font-size: 18px;
+	border-bottom: 2px solid #FFDDFF;
+	margin-top: 50px;
+	margin-bottom: 30px;
+}
+h3 {
+	fotn-style: normal;
+	font-size: 14px;
+	color: #444444;
+}
+ul {
+	margin: 0px;
+	padding: 0px;
+}
+li {
+	padding-left: 20px;
+	list-style-type: none;
+	background: url("img/mark.gif") no-repeat 0px 3px;
+}
+
+pre {
+	margin :0px;
+}
+
+form{
+	margin :0px;
+}
+
+.waku {
+	background-color: #999999;
+}
+.wakuin {
+	background-color: #FFFFFF;
+}
+.title {
+	padding: 16px 16px 0px;
+}
+.copyright {
+	font-size: 12px;
+	background-image: url('img/copyright.gif');
+	height: 20px;
+}
+table.endbarborder {
+	background-color: #FFAAFF;
+	height: 3px;
+}
+.mainbody {
+	padding: 12px;
+}
+.source {
+	border: 1px solid #444444;
+	vertical-align: top;
+	background-color: #FFFFEE;
+	padding: 4px;
+}
+div.source {
+	padding: 4px;
+	border: 1px solid #444444;
+	vertical-align: top;
+	background-color: #FFFFEE;
+}
+.menubar {
+	background-image: url('img/menubar.gif');
+	text-align: center;
+	vertical-align: center;
+	width: 180px;
+	height: 26px;
+}
+.menuarea {
+	background-color: white;
+	padding: 10px;
+}
+.download {
+	margin: 8px;
+	background-color: gray;
+	height : 30px;
+}
+.downloadtd {
+	padding : 8px;
+	background-color: white;
+}
+.forum {
+	margin: 8px;
+	background-color: gray;
+	height : 30px;
+}
+.forumtd {
+	padding : 8px;
+	background-color: white;
+}
+.forumtitle{
+	padding : 8px;
+	background-color: #FFEEFF;
+}
+.amatitle
+{
+	font-size : 10px;
+}
+.amaprice
+{
+	font-size : 10px;
+	color: #CC6600;
+}
+.errmsg
+{
+	color: red;
+}
+
+.cheetan_sql_log
+{
+	text-align: center;
+	border: black solid 1px;
+}
+
+.cheetan_sql_log th
+{
+	background-image: url('img/menubar.gif');
+	vertical-align: center;
+	height: 26px;
+}
+
+.cheetan_sql_log td
+{
+	border-top: gray solid 1px;
+}
+
+
+.mytable
+{
+	border: black solid 1px;
+	font-size: 14px;
+	width: 100%;
+}
+
+.mytable th
+{
+	text-align: center;
+	background-image: url('img/menubar.gif');
+	vertical-align: center;
+	height: 26px;
+	font-weight: normal;
+}
+
+.mytable td
+{
+	text-align: left;
+	border-top: gray solid 1px;
+	padding: 5px;
+}
+
+.point
+{
+	padding-left: 20px;
+	background: url("img/mark.gif") no-repeat 0px 3px;
+}

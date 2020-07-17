@@ -1,0 +1,16 @@
+
+
+<h1>User regist</h1>
+<font color="red"><?php echo $data['errmsg']; ?></font>
+<form method="post" action="user/confirm.php">
+<label for="user/name">Nickname Displayed in this site</label><br>
+<input type="text" name="user/name" value="<?php echo $s->html( $data['user']['name'] ); ?>" size="40"><br>
+<label for="User/email">Email(Secret)</label><br>
+<input type="text" name="user/email" value="<?php echo $s->html( $data['user']['email'] ); ?>" size="40"><br>
+<label for="user/password">Password(Secret)</label><br>
+<input type="password" name="user/password" value="<?php echo $s->html( $data['user']['password'] ); ?>"><br>
+<p>
+<a href="first/privacy.php">Privacy policy</a>
+</p>
+<input type="submit" value="Regist">
+</form>

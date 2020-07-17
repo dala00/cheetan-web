@@ -1,0 +1,252 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=Shift-JIS">
+<base href="http://phpeng.cheetan.net/" target="_self">
+<title><?php if( !empty( $data['page_title'] ) ) echo $data['page_title'] . ' '; ?>PHP framework Cheetan</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div align="center">
+<table width="800" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width=1 bgcolor="#666666">
+	</td>
+	<td>
+	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	  <tr>
+		<td class="title"> 
+		  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+			<tr>
+			  <td> 
+				<div align="left"><a href="."><img src="img/title.gif" border=0 width="320" height="100"></a></div>
+			  </td>
+			  <td valign="bottom">
+				<div align="right"><img src="img/subtitle.gif" width="313" height="94"></div>
+			  </td>
+			</tr>
+		  </table>
+		</td>
+	  </tr>
+	</table>
+	  <table width="100%" border="0" cellpadding="0" cellspacing="0" class="endbarborder">
+		<tr>
+		  <td></td>
+		</tr>
+	  </table>
+	  <table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#FFCCFF">
+		<tr>
+		    <td align="center" class="copyright" style="text-align:right;">
+				<?php print $link_ja; ?>&nbsp;&nbsp;
+				<?php print $link_en; ?>&nbsp;&nbsp;
+			</td>
+		</tr>
+	  </table>
+	  <table width="100%" border="0" cellpadding="0" cellspacing="0" class="endbarborder">
+		<tr>
+		  <td></td>
+		</tr>
+	  </table>
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+		  <tr>
+			<td width="200" bgcolor="#FFDDFF" align="center" valign="top">
+			
+			<br>
+              <table width="180" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td class="menubar">Cheetan</td>
+                </tr>
+                <tr>
+                  <td class="menuarea">
+				  <ul>
+				  <li><a href=".">top</a></li>
+				  <li><a href="first/concept.php">concept</a></li>
+				  <li><a href="first/download.php">Cheetan download</a></li>
+				  <li><a href="first/install.php">install</a></li>
+				  </ul>
+				  </td>
+                </tr>
+              </table>
+
+			<br>
+              <table width="180" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td class="menubar">User menu</td>
+                </tr>
+                <tr>
+                  <td class="menuarea">
+				  <ul>
+				  <?php if( $c->auth->islogin() ){ ?>
+				  <li><a href="user/">my page</a></li>
+				  <li><a href="user/projects.php">project</a></li>
+				  <li><a href="user/info.php">user information</a></li>
+				  <li><a href="user/edit.php">profile</a></li>
+				  <li><a href="user/logout.php">logout</a></li>
+				  <?php } else { ?>
+				  <li><a href="user/regist.php">user regist</a></li>
+				  <li><a href="user/login.php">login</a></li>
+				  <?php } ?>
+				  </ul>
+				  </td>
+                </tr>
+              </table>
+			
+			<br>
+              <table width="180" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td class="menubar">New projects</td>
+                </tr>
+                <tr>
+                  <td class="menuarea">
+				  <ul>
+				  <?php foreach( $project_new as $row ){ ?>
+				  <li><a href="projects/<?php echo $row['id']; ?>"><?php echo h( $row['name_english'] ); ?></a></li>
+				  <?php } ?>
+				  </ul>
+				  <div style="text-align: right"><a href="projects/">&gt;&gt;view all</a></div>
+				  </td>
+                </tr>
+              </table>
+			
+			<br>
+              <table width="180" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td class="menubar">projects</td>
+                </tr>
+                <tr>
+                  <td class="menuarea">
+				  <ul>
+				  <?php foreach( $project_ranking as $row ){ ?>
+				  <li><a href="projects/<?php echo $row['id']; ?>"><?php echo h( $row['name_english'] ); ?></a></li>
+				  <?php } ?>
+				  </ul>
+				  <div style="text-align: right"><a href="projects/">&gt;&gt;view all</a></div>
+				  </td>
+                </tr>
+              </table>
+			  
+			<br>
+              <table width="180" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td class="menubar">manual</td>
+                </tr>
+                <tr>
+                  <td class="menuarea">
+				  <ul>
+				  <li><a href="manual/tutorial.php">tutorial</a></li>
+				  <li><a href="manual/configfile.php">config file</a></li>
+				  <li><a href="manual/model.php">model</a></li>
+				  <li><a href="manual/view.php">view</a></li>
+				  <li>controller</li>
+				  <li>database</li>
+				  <li><a href="manual/validate.php">validate</a></li>
+				  <li><a href="manual/sanitize.php">sanitize</a></li>
+				  <li><a href="manual/logging.php">logging</a></li>
+				  <li><a href="manual/notice.php">method, notice</a></li>
+				  </ul>
+				  </td>
+                </tr>
+              </table>
+			  
+			<br>
+              <table width="180" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td class="menubar">sample</td>
+                </tr>
+                <tr>
+                  <td class="menuarea">
+				  <ul>
+				  <li><a href="sample/blog.php">blog of tutorial</a></li>
+				  </ul>
+				  </td>
+                </tr>
+              </table>
+			  
+			<br>
+              <table width="180" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td class="menubar">community</td>
+                </tr>
+                <tr>
+                  <td class="menuarea">
+				  <ul>
+				  <li><a href="community/forum/">forum</a></li>
+				  <li><a href="http://sourceforge.jp/projects/cheetan/">sourceforge</a></li>
+				  <li><a href="first/privacy.php">privacy</a></li>
+				  <li><a href="community/contact.php">contact</a></li>
+				  <li><a href="http://www.alphabrend.com/">developed by</a></li>
+				  <li><a href="http://program.alphabrend.com/">developer's blog</a></li>
+				  </ul>
+				  </td>
+                </tr>
+              </table>
+			  
+			<br>
+              <table width="180" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td class="menubar">PHP</td>
+                </tr>
+                <tr>
+                  <td class="menuarea">
+					<?php foreach( $amazons as $amazon ){ ?>
+					<a href="<?php print $amazon["url"]; ?>" target="_blank"><img src="<?php print $amazon["img"]; ?>" border=0></a><br>
+					<div class="amatitle">
+					<a href="<?php print $amazon["url"]; ?>" target="_blank"><?php print $amazon["name"]; ?></a>
+					</div>
+					<div class="amaprice">\ <?php print number_format( $amazon["price"] ); ?></div>
+					<br>
+					<?php } ?>
+				  </td>
+                </tr>
+              </table>
+			  <br>
+			  
+			  <table width=180 border=0 cellspacing=0 cellpadding=0>
+				<tr>
+					<td>
+			  <a href="http://sourceforge.jp/"><img src="http://sourceforge.jp/sflogo.php?group_id=2480" width="96" height="31" border="0" alt="SourceForge.jp"></a>
+			  <br>
+			  <br>
+			  </td>
+			  </tr>			  
+			</table>
+
+			  
+            </td>
+			<td class="mainbody" valign="top">
+				<?php
+					if( function_exists( "content_eng" ) )	content_eng( $data );
+					else if( function_exists( 'content' ) )	content( $data );
+					else									$this->content();
+				?>
+				<div align="center">
+</div>
+			</td>
+		  </tr>
+		</table>
+
+	  <table width="100%" border="0" cellpadding="0" cellspacing="0" class="endbarborder">
+		<tr>
+		  <td></td>
+		</tr>
+	  </table>
+	  <table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#FFCCFF">
+		<tr>
+		  <td align="center" class="copyright">copyright &copy;2006 Cheetan all rights reserverd</td>
+		</tr>
+	  </table>
+	  <table width="100%" border="0" cellpadding="0" cellspacing="0" class="endbarborder">
+		<tr>
+		  <td></td>
+		</tr>
+	  </table>
+	</td>
+	<td width=6 background="img/shadow.gif">
+	</td>
+  </tr>
+</table>
+
+</div>
+</body>
+</html>

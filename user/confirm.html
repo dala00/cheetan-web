@@ -1,0 +1,12 @@
+<h1>Confirm</h1>
+<font color="red"><?php echo $data['errmsg']; ?></font>
+<form method="post" action="user/exec.php">
+<label for="user/name">Nickname</label><br>
+<?php echo $s->html( $data['user']['name'] ); ?><br><br>
+<label for="User/email">Email</label><br>
+<?php echo $s->html( $data['user']['email'] ); ?><br><br>
+<label for="user/password">Password</label><br>
+********<br>
+<?php echo $c->helper->hidden( $data['user'], 'user/' ); ?>
+<input type="submit" value="Regist">&nbsp;<input type="submit" name="back" value="Back">
+</form>

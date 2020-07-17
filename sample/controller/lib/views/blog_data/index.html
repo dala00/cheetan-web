@@ -1,0 +1,22 @@
+<p>
+<a href="<?php echo $c->html->url('/blog_data/add'); ?>">Write new</a>
+</p>
+
+<?php foreach( $data["datas"] as $data ){ ?>
+<table border=1 cellpadding=8 cellspacing=0>
+  <tr>
+    <td>
+    	<?php print $s->html( $data["title"] ); ?>&nbsp;
+    	<a href="<?php echo $c->html->url('/blog_data/edit/' . $data["id"]); ?>">Edit</a>&nbsp;
+    	<a href="<?php echo $c->html->url('/blog_data/del/' . $data["id"]); ?>">Del</a>
+    </td>
+  </tr>
+  <tr>
+    <td><?php print str_replace( "\n", "<br>", $s->html( $data["body"] ) ); ?></td>
+  </tr>
+  <tr>
+    <td><?php print date('Y-m-d H:i:s', strtotime($data["modified"])); ?></td>
+  </tr>
+</table>
+<br>
+<?php } ?>

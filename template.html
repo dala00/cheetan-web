@@ -1,0 +1,259 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=Shift-JIS">
+<base href="http<?php if (!empty($_SERVER['HTTPS'])) echo 's'; ?>://<?= $_SERVER['HTTP_HOST'] ?>/" target="_self">
+<title><?php if( !empty( $data['page_title'] ) ) echo $data['page_title'] . ' '; ?>PHPフレームワーク　ちいたん</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div align="center">
+<table width="800" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width=1 bgcolor="#666666">
+	</td>
+	<td>
+	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	  <tr>
+		<td class="title"> 
+		  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+			<tr>
+			  <td> 
+				<div align="left"><a href="."><img src="img/title.gif" border=0 width="320" height="100"></a></div>
+			  </td>
+			  <td valign="bottom">
+				<div align="right"><img src="img/subtitle.gif" width="313" height="94"></div>
+			  </td>
+			</tr>
+		  </table>
+		</td>
+	  </tr>
+	</table>
+	  <table width="100%" border="0" cellpadding="0" cellspacing="0" class="endbarborder">
+		<tr>
+		  <td></td>
+		</tr>
+	  </table>
+	  <table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#FFCCFF">
+		<tr>
+		    <td align="center" class="copyright" style="text-align:right;">
+				<?php print $link_ja; ?>&nbsp;&nbsp;
+				<?php print $link_en; ?>&nbsp;&nbsp;
+			</td>
+		</tr>
+	  </table>
+	  <table width="100%" border="0" cellpadding="0" cellspacing="0" class="endbarborder">
+		<tr>
+		  <td></td>
+		</tr>
+	  </table>
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+		  <tr>
+			<td width="200" bgcolor="#FFDDFF" align="center" valign="top">
+			<br>
+              <table width="180" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td class="menubar">ちいたん</td>
+                </tr>
+                <tr>
+                  <td class="menuarea">
+				  <ul>
+				  <li><a href=".">トップページ</a></li>
+				  <li><a href="first/concept.php">コンセプト</a></li>
+				  <li><a href="first/download.php">本体ダウンロード</a></li>
+				  <li><a href="first/install.php">インストール</a></li>
+				  </ul>
+				  </td>
+                </tr>
+              </table>
+			
+			<br>
+              <table width="180" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td class="menubar">ユーザーメニュー</td>
+                </tr>
+                <tr>
+                  <td class="menuarea">
+				  <ul>
+				  <?php if( $c->auth->islogin() ){ ?>
+				  <li><a href="user/">マイページ</a></li>
+				  <li><a href="user/projects.php">プロジェクト</a></li>
+				  <li><a href="user/info.php">ユーザー情報</a></li>
+				  <li><a href="user/edit.php">プロフィール</a></li>
+				  <li><a href="user/logout.php">ログアウト</a></li>
+				  <?php } else { ?>
+				  <li><a href="user/regist.php">ユーザー登録</a></li>
+				  <li><a href="user/login.php">ログイン</a></li>
+				  <?php } ?>
+				  </ul>
+				  </td>
+                </tr>
+              </table>
+			
+			<br>
+              <table width="180" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td class="menubar">新着プロジェクト</td>
+                </tr>
+                <tr>
+                  <td class="menuarea">
+				  <ul>
+				  <?php foreach( $project_new as $row ){ ?>
+				  <li><a href="projects/<?php echo $row['id']; ?>"><?php echo h( $row['name'] ); ?></a></li>
+				  <?php } ?>
+				  </ul>
+				  <div style="text-align: right"><a href="projects/">&gt;&gt;全て見る</a></div>
+				  </td>
+                </tr>
+              </table>
+			
+			<br>
+              <table width="180" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td class="menubar">人気プロジェクト</td>
+                </tr>
+                <tr>
+                  <td class="menuarea">
+				  <ul>
+				  <?php foreach( $project_ranking as $row ){ ?>
+				  <li><a href="projects/<?php echo $row['id']; ?>"><?php echo h( $row['name'] ); ?></a></li>
+				  <?php } ?>
+				  </ul>
+				  <div style="text-align: right"><a href="projects/">&gt;&gt;全て見る</a></div>
+				  </td>
+                </tr>
+              </table>
+			  
+			<br>
+              <table width="180" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td class="menubar">マニュアル</td>
+                </tr>
+                <tr>
+                  <td class="menuarea">
+				  <ul>
+				  <li><a href="manual/tutorial.php">チュートリアル</a></li>
+				  <li><a href="manual/configfile.php">コンフィグファイル</a></li>
+				  <li><a href="manual/model.php">モデル</a></li>
+				  <li><a href="manual/view.php">ビュー</a></li>
+				  <li>コントローラー</li>
+				  <li>データベース</li>
+				  <li><a href="manual/validate.php">バリデート</a></li>
+				  <li><a href="manual/sanitize.php">サニタイズ</a></li>
+				  <li><a href="manual/logging.php">ロギング</a></li>
+				  <li><a href="manual/notice.php">仕様、注意事項</a></li>
+				  </ul>
+				  </td>
+                </tr>
+              </table>
+			  
+			<br>
+              <table width="180" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td class="menubar">サンプル</td>
+                </tr>
+                <tr>
+                  <td class="menuarea">
+				  <ul>
+				  <li><a href="sample/blog.php">チュートリアルのブログ</a></li>
+				  </ul>
+				  </td>
+                </tr>
+              </table>
+			  
+			<br>
+              <table width="180" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td class="menubar">コミュニティ</td>
+                </tr>
+                <tr>
+                  <td class="menuarea">
+				  <ul>
+				  <li><a href="community/forum/">フォーラム</a></li>
+				  <li><a href="http://sourceforge.jp/projects/cheetan/">sourceforge</a></li>
+				  <li><a href="first/privacy.php">プライバシー</a></li>
+				  <li><a href="community/contact.php">お問い合わせ</a></li>
+				  <li><a href="http://www.alphabrend.com/">開発元</a></li>
+				  <li><a href="http://program.alphabrend.com/">開発者ブログ</a></li>
+				  </ul>
+				  </td>
+                </tr>
+              </table>
+			  
+			<br>
+              <table width="180" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td class="menubar">PHP</td>
+                </tr>
+                <tr>
+                  <td class="menuarea">
+					<?php foreach( $amazons as $amazon ){ ?>
+					<a href="<?php print $amazon["url"]; ?>" target="_blank"><img src="<?php print $amazon["img"]; ?>" border=0></a><br>
+					<div class="amatitle">
+					<a href="<?php print $amazon["url"]; ?>" target="_blank"><?php print $amazon["name"]; ?></a>
+					</div>
+					<div class="amaprice"><?php print number_format( $amazon["price"] ); ?>円</div>
+					<br>
+					<?php } ?>
+				  </td>
+                </tr>
+              </table>
+			  <br>
+			  
+			  <table width=180 border=0 cellspacing=0 cellpadding=0>
+				<tr>
+					<td>
+			  <a href="http://sourceforge.jp/"><img src="http://sourceforge.jp/sflogo.php?group_id=2480" width="96" height="31" border="0" alt="SourceForge.jp"></a>
+			  <br>
+			  <br>
+			  </td>
+			  </tr>			  
+			</table>
+
+			  
+            </td>
+			<td class="mainbody" valign="top">
+				<?php if( $_SESSION['flash'] ){ ?>
+					<font color="red"><?php echo $_SESSION['flash']; ?></font>
+				<?php } ?>
+				<?php
+				if( function_exists( 'content' ) )
+				{
+					content( $data, $c );
+				}
+				else
+				{
+					$this->content();
+				}
+				?>
+				<div align="center">
+</div>
+			</td>
+		  </tr>
+		</table>
+
+	  <table width="100%" border="0" cellpadding="0" cellspacing="0" class="endbarborder">
+		<tr>
+		  <td></td>
+		</tr>
+	  </table>
+	  <table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#FFCCFF">
+		<tr>
+		  <td align="center" class="copyright">copyright &copy;2006 ちいたん all rights reserverd</td>
+		</tr>
+	  </table>
+	  <table width="100%" border="0" cellpadding="0" cellspacing="0" class="endbarborder">
+		<tr>
+		  <td></td>
+		</tr>
+	  </table>
+	</td>
+	<td width=6 background="img/shadow.gif">
+	</td>
+  </tr>
+</table>
+
+</div>
+</body>
+</html>
