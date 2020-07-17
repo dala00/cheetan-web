@@ -1,0 +1,14 @@
+{
+    "name": "dala00/cheetan-web",
+    "type": "website",
+    "require": {
+        "ext-mbstring": "^7.2"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Shoichi Namba",
+            "email": "alphabrend@gmail.com"
+        }
+    ]
+}

@@ -1,13 +1,16 @@
 <?php
-	mb_language( 'japanese' );
-	
-	define( 'CURDIR', basename( dirname( $_SERVER["SCRIPT_FILENAME"] ) ) );
-	define( 'CURFILE', basename( $_SERVER['SCRIPT_FILENAME'] ) );
-	
-	define( 'PAGE_DISP_NUM', 10 );
-	define( 'ENABLE_TAGS', '<a><div><li><b><i><string><span><h1><h2><h3><h4><h5><h6><hr><p><br><pre><center><blockquote><address><font><tt><u><s><strike><big><small><sub><sup><em><code><samp><kbd><var><cite><ul><ol><dl><dt><dd><table><th><tr><td><caption><a><image><map><area>' );
-	
-	define( 'ADMIN_EMAIL', 'cheetan@php.cheetan.net' );
+define('ROOT', realpath(__DIR__));
+define( 'CURDIR', basename( dirname( $_SERVER["SCRIPT_FILENAME"] ) ) );
+define( 'CURFILE', basename( $_SERVER['SCRIPT_FILENAME'] ) );
+
+define( 'PAGE_DISP_NUM', 10 );
+define( 'ENABLE_TAGS', '<a><div><li><b><i><string><span><h1><h2><h3><h4><h5><h6><hr><p><br><pre><center><blockquote><address><font><tt><u><s><strike><big><small><sub><sup><em><code><samp><kbd><var><cite><ul><ol><dl><dt><dd><table><th><tr><td><caption><a><image><map><area>' );
+
+define( 'ADMIN_EMAIL', 'cheetan@php.cheetan.net' );
+
+require_once ROOT . '/vendor/autoload.php';
+
+mb_language( 'japanese' );
 
 
 function is_english()
