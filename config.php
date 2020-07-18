@@ -15,7 +15,7 @@ mb_language( 'japanese' );
 
 function is_english()
 {
-	if( $_SERVER["HTTP_HOST"] == "phpeng.cheetan.net" )	return true;
+	if( $_SERVER["HTTP_HOST"] == "cheetan-en.alphabrend.net" )	return true;
 	return false;
 }
 
@@ -64,7 +64,7 @@ function config_controller( &$c )
 	{
 		$c->SetTemplateFile( dirname(__FILE__) . "/template_e.html" );
 		$amazons	= [];
-		$link_ja	= '<a href="http://php.cheetan.net' . $_SERVER["REQUEST_URI"] . '">Japanese</a>';
+		$link_ja	= '<a href="https://cheetan.alphabrend.net' . $_SERVER["REQUEST_URI"] . '">Japanese</a>';
 		$link_en	= "English";
 	}
 	else
@@ -72,7 +72,7 @@ function config_controller( &$c )
 		$c->SetTemplateFile( dirname(__FILE__) . "/template.html" );
 		$amazons	= [];
 		$link_ja	= 'Japanese';
-		$link_en	= '<a href="http://phpeng.cheetan.net' . $_SERVER["REQUEST_URI"] . '">English</a>';
+		$link_en	= '<a href="https://cheetan-en.alphabrend.net' . $_SERVER["REQUEST_URI"] . '">English</a>';
 	}
 	$c->set( "amazons", $amazons );
 	$c->set( 'project_ranking', [] );
