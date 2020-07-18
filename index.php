@@ -52,23 +52,48 @@ function content( $data )
 </p>
 <p>&nbsp;&nbsp;ちなみにちいたんというのは制作者の奥さんの愛称です。 </p>
 <p>&nbsp;&nbsp;ライセンスはMITです。 </p>
-<h2>告知</h2>
-<p>　<a href="http://jump.alphabrend.com/" target="_blank">こんなの</a>作りました。暇な時にどうぞ。
+<h2>当サイトについて</h2>
+
+<p>
+  当サイト（元々 http://php.cheetan.net ）はドメイン失効により消滅し、最初のリリースから14年後、2020年のある日にふと思い立って復旧させた記念サイトです。データベース関連は紛失のため復旧していないため、機能自体動作していません。
 </p>
-<p> 　ちいたん利用に関してのアンケートです。<br>
-  　<a href="http://enq-maker.com/fzfYXdj" target="_blank">http://enq-maker.com/fzfYXdj</a></p>
-<p> 　PHP利用に関してのアンケートです。<font color="red">NEW</font><br>
-  　<a href="http://enq-maker.com/bHfxeDG" target="_blank">http://enq-maker.com/bHfxeDG</a><br>
-「講習会などがあると良い」と答えた方は、どの様な講習会があると良いと考えているか、コメントに書いて頂けると参考になります。</p>
-<p> 　ユーザー登録に関してのアンケートです。<br>
- 　<a href="http://php.cheetan.net/community/forum/categories/3/topics/352/1.html">アンケート</a>
-</p>
-<p> 　ほったらかしも申し訳ないのでちいたんの開発をご協力頂ける方を募集します。
-もともとモチベーションのみで行っておりますので開発費は出ません。
-ご興味のある方は以下より御連絡下さい。まずはSQLite対応から考えています。
-<br>
- 　<a href="http://php.cheetan.net/community/contact.php">お問い合わせ</a>
-</p>
+
+<section>
+  <h3>作者のちいたんリポジトリ</h3>
+  <p>
+    <a href="https://github.com/dala00/cheetan" target="_blank">https://github.com/dala00/cheetan</a>
+  </p>
+</section>
+
+<section>
+  <h3>PHP7に対応</h3>
+  <p>
+    PHP7に対応してくださった方がいたようです。<br>
+    <a href="https://github.com/symfoware/cheetan" target="_blank">https://github.com/symfoware/cheetan</a>
+  </p>
+  <p>
+    そのあたりのことを書いていただいたブログです。<br>
+    <a href="https://symfoware.blog.fc2.com/blog-entry-2355.html" target="_blank">
+      軽量PHPフレームワーク「ちいたん」 PHP 7系対応 - Symfoware
+    </a>
+  </p>
+  <p>
+    さらにマニュアルも作っていただいているようです。<br>
+    <a href="https://symfo.web.fc2.com/etc/cheetan/userguide/index.html" target="_blank">ちいたん ユーザガイド</a>
+  </p>
+</section>
+
+<section>
+  <h3>当サイトのソースコード</h3>
+  <p>
+    当サイトのソースコードはGitHubで公開しています。（PSRも無かった時代のものでひどい作りになっていますのでご容赦下さい）<br>
+    <a href="https://github.com/dala00/cheetan-web" target="_blank">https://github.com/dala00/cheetan-web</a>
+  </p>
+  <p>
+    作者の方でアップデートを行うことはありませんので、もしもっとちゃんと作り直したい、他にも機能を追加したい、OSSの練習をしたいなどあればもう何でも自由にプルリクエストを送っていただいて大丈夫です。
+  </p>
+</section>
+
 <h2>新着情報</h2>
 
 <p>&nbsp;&nbsp;バージョン0.8.1.0公開。model.phpのquery関数バグFIXです。</p>
@@ -281,6 +306,48 @@ function content_eng( $data )
 </p>
 <p>&nbsp;&nbsp;By the way, 'Cheetan' is a nickname of developer's wife.</p>
 <p>&nbsp;&nbsp;Cheetan is licensed under the MIT license.</p>
+
+<h2>Information</h2>
+
+<p>
+  This site once disappeared because domain expired. This is just a revived (2020) memorial site.
+</p>
+
+<section>
+  <h3>Cheetan repository</h3>
+  <p>
+    <a href="https://github.com/dala00/cheetan" target="_blank">https://github.com/dala00/cheetan</a>
+  </p>
+</section>
+
+<section>
+  <h3>PHP7</h3>
+  <p>
+    Someone upgraded for PHP7<br>
+    <a href="https://github.com/symfoware/cheetan" target="_blank">https://github.com/symfoware/cheetan</a>
+  </p>
+  <p>
+    The blog article about it.<br>
+    <a href="https://symfoware.blog.fc2.com/blog-entry-2355.html" target="_blank">
+      軽量PHPフレームワーク「ちいたん」 PHP 7系対応 - Symfoware
+    </a>
+  </p>
+  <p>
+    He created a manual site. Thanks.<br>
+    <a href="https://symfo.web.fc2.com/etc/cheetan/userguide/index.html" target="_blank">ちいたん ユーザガイド</a>
+  </p>
+</section>
+
+<section>
+  <h3>Source code of this site</h3>
+  <p>
+    Source code of this site is available on GitHub. (I'm sorry it's so dirty because even no PSR in 2006)<br>
+    <a href="https://github.com/dala00/cheetan-web" target="_blank">https://github.com/dala00/cheetan-web</a>
+  </p>
+  <p>
+    Feel free to contribute.
+  </p>
+</section>
 
 <h2>News</h2>
 

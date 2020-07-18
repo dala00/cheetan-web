@@ -1,10 +1,18 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=Shift-JIS">
-<base href="http<?php if (!empty($_SERVER['HTTPS']) || (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https')) echo 's'; ?>://<?= $_SERVER['HTTP_HOST'] ?>/" target="_self">
-<title><?php if( !empty( $data['page_title'] ) ) echo $data['page_title'] . ' '; ?>PHPフレームワーク　ちいたん</title>
-<link href="style.css" rel="stylesheet" type="text/css">
+	<meta http-equiv="Content-Type" content="text/html; charset=Shift-JIS">
+	<base href="http<?php if (!empty($_SERVER['HTTPS']) || (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https')) echo 's'; ?>://<?= $_SERVER['HTTP_HOST'] ?>/" target="_self">
+	<title><?php if( !empty( $data['page_title'] ) ) echo $data['page_title'] . ' '; ?>PHPフレームワーク　ちいたん</title>
+	<meta name="description" content="「ちいたん」は世界最軽量PHPフレームワークです">
+	<meta property="og:title" content="PHPフレームワーク ちいたん">
+	<meta property="og:type" content="website">
+	<meta property="og:image" content="https://cheetan.alphabrend.net/img/title.gif">
+	<meta property="og:site_name" content="PHPフレームワーク ちいたん">
+	<meta property="og:description" content="「ちいたん」は世界最軽量PHPフレームワークです">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:image" content="https://cheetan.alphabrend.net/img/title.gif">
+	<link href="style.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
